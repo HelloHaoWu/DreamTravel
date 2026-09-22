@@ -16,7 +16,8 @@
 </p>
 
 <p align="center">
-  <a href="#快速开始">快速开始</a> ·
+  <a href="#演示视频">演示视频</a> ·
+  <a href="#在-iphone-上使用">App 使用</a> ·
   <a href="#体验设计">体验设计</a> ·
   <a href="Documentation/Architecture.md">Agent 架构</a> ·
   <a href="TravelProviderSetup.md">API 配置</a> ·
@@ -29,7 +30,15 @@
 
 忙碌了一天，不想再做一晚上的攻略。DreamTravel 从「这周末，我们在哪见面」开始，结合天气、真实地点、交通与公开参考，整理几种不同的约会体验。
 
-**目前是可运行的原生 iOS 开发原型（v0.16.1），重点支持城市内半日约会。** 不是已经上架的完整旅游预订产品；多日旅行、酒店库存和自动预订仍是后续方向。
+**DreamTravel 面向 iPhone，日常使用从打开 App 开始。** 当前为原生 iOS 开发预览版（v0.16.1），重点支持城市内半日约会，尚未提供 App Store、TestFlight 或公开安装包。Xcode 用于现阶段的开发调试；多日旅行、酒店库存和自动预订仍是后续方向。
+
+## 演示视频
+
+[**▶ 观看 / 下载 Demo 1 · iPhone App 实际交互**](https://github.com/HelloHaoWu/DreamTravel/releases/download/demo-1/DreamTravel-Demo1.mp4)
+
+约 **11 分 23 秒**，无音轨。保留本次录制的真实等待过程；想先看行程、备选与主题切换，可以跳到 **08:00 左右**。这是一段模拟器录制，不代表真机性能或每次生成耗时。
+
+[视频发布页与说明 →](https://github.com/HelloHaoWu/DreamTravel/releases/tag/demo-1)
 
 ## 体验设计
 
@@ -55,21 +64,13 @@
 
 小红书、抖音、大众点评等平台的完整内容覆盖**不作保证**。不能读取的帖子不算有效样本，历史记录也不等于当天营业或有预约名额。
 
-## 快速开始
+## 在 iPhone 上使用
 
-### 1. 用 Xcode 运行
+以下是 App 内的使用流程；当前可先通过上方视频预览，安装分发将在后续版本开放。开发者本地调试见下方 [开发与验证](#开发与验证)。
 
-准备一台 Mac、支持 Swift 6 的 Xcode 和 iPhone 模拟器。工程最低运行版本为 iOS 17；当前开发环境使用 Xcode 26.6。
+### 1. 打开 DreamTravel
 
-```bash
-git clone https://github.com/HelloHaoWu/DreamTravel.git
-cd DreamTravel
-open DreamTravelMobile.xcodeproj
-```
-
-选择 **DreamTravelMobile** Scheme 和 iPhone 模拟器，按 **⌘R**。真机运行需在 **Signing & Capabilities** 中选择自己的开发团队和可用 Bundle ID。
-
-没有 Key 也可以先进入明确标注的演示行程。
+从 iPhone 主屏幕打开 App，进入「开始」页。没有 Key 也可以先进入明确标注的演示行程。
 
 ### 2. 配置自己的 API Key
 
@@ -111,6 +112,20 @@ Swift `actor` 在手机端协调工具与远端模型，`AsyncStream` 向 SwiftU
 ## 开发与验证
 
 应用没有第三方 Swift 包依赖，使用 SwiftUI、Foundation、MapKit、Security 和 SafariServices 等系统框架。
+
+### 本地开发调试
+
+准备一台 Mac、支持 Swift 6 的 Xcode 和 iPhone 模拟器。工程最低运行版本为 iOS 17；当前开发环境使用 Xcode 26.6。
+
+```bash
+git clone https://github.com/HelloHaoWu/DreamTravel.git
+cd DreamTravel
+open DreamTravelMobile.xcodeproj
+```
+
+选择 **DreamTravelMobile** Scheme 和 iPhone 模拟器，按 **⌘R** 调试。真机调试需在 **Signing & Capabilities** 中选择自己的开发团队和可用 Bundle ID。
+
+### 构建与检查
 
 ```bash
 # 离线 Fixture：不调用付费 API
@@ -163,6 +178,7 @@ zsh scripts/build-app.sh
 
 ## 接下来
 
+- [ ] 完善真机体验，准备 iPhone App 的测试分发与安装流程。
 - [ ] 提高公开参考的可读率、同店匹配和可追溯性。
 - [ ] 增加更多交通、雨天及弱网场景的真机验证。
 - [ ] 将用户主动反馈沉淀为可查看、可删除的经验。
