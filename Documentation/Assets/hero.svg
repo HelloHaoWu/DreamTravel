@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="540" viewBox="0 0 1280 540" role="img" aria-labelledby="title desc">
+<title id="title">DreamTravel — 把攻略的时间，留给见面。</title>
+<desc id="desc">青绿色的产品封面，右侧用自制示意卡片展示一段包含书店、手作和晚餐的约会时间线。仅为交互示意，不是实时推荐。</desc>
+<defs>
+  <linearGradient id="bg" x2="1" y2="1"><stop stop-color="#EDF7F2"/><stop offset=".6" stop-color="#F3F5F2"/><stop offset="1" stop-color="#EFE8F4"/></linearGradient>
+  <linearGradient id="card" x2="1" y2="1"><stop stop-color="#F8FCFA"/><stop offset="1" stop-color="#E5F1EF"/></linearGradient>
+  <filter id="shadow" x="-30%" y="-20%" width="160%" height="160%"><feDropShadow dx="0" dy="12" stdDeviation="18" flood-color="#345D58" flood-opacity=".09"/></filter>
+</defs>
+<rect width="1280" height="540" rx="28" fill="url(#bg)"/>
+<circle cx="1230" cy="25" r="250" fill="none" stroke="#D9E6E1" stroke-width="1.5"/>
+<circle cx="1230" cy="25" r="212" fill="none" stroke="#DFE6E8" stroke-width="1.5"/>
+<circle cx="50" cy="530" r="210" fill="none" stroke="#D6E9E0" stroke-width="1.5"/>
+<g font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif">
+<rect x="64" y="58" width="44" height="44" rx="14" fill="#216E73"/>
+<path d="M75 86 L84 71 L87 80 L98 76 L90 92 Z" fill="none" stroke="#EFFBF4" stroke-width="2" stroke-linejoin="round"/>
+<text x="122" y="88" fill="#214E50" font-size="28" font-weight="650" letter-spacing="-.8">DreamTravel</text>
+<text x="64" y="184" fill="#69807A" font-size="13" letter-spacing="3">LESS PLANNING. MORE TOGETHER.</text>
+<text x="62" y="256" fill="#183D3C" font-size="49" font-weight="650" letter-spacing="-1">把攻略的时间，</text>
+<text x="62" y="322" fill="#216E73" font-size="49" font-weight="650" letter-spacing="-1">留给见面。</text>
+<text x="66" y="373" fill="#607670" font-size="18">城市、一句话，一段从容的相处时间。</text>
+<g font-size="12" font-weight="600" fill="#3F6F69">
+<rect x="64" y="423" width="109" height="32" rx="16" fill="#DBEBE4"/><text x="86" y="444">Native iOS</text>
+<rect x="183" y="423" width="106" height="32" rx="16" fill="#DBEBE4"/><text x="204" y="444">API Agent</text>
+<rect x="299" y="423" width="123" height="32" rx="16" fill="#DBEBE4"/><text x="320" y="444">Open Source</text>
+</g>
+<g transform="translate(760 44)" filter="url(#shadow)">
+<rect width="420" height="448" rx="30" fill="#FFFFFF" fill-opacity=".91"/>
+<text x="28" y="42" fill="#204C48" font-size="18" font-weight="650">这周末 · 慢慢相处</text>
+<g font-size="11" text-anchor="middle">
+<rect x="28" y="59" width="111" height="28" rx="14" fill="#216E73"/><text x="83" y="77" fill="#FFF">雨天慢享</text>
+<rect x="149" y="59" width="111" height="28" rx="14" fill="#F7E7EC"/><text x="204" y="77" fill="#995A75">室内微浪漫</text>
+<rect x="270" y="59" width="122" height="28" rx="14" fill="#EAE8F4"/><text x="331" y="77" fill="#746394">轻步夜色</text>
+</g>
+<path d="M40 123 V364" stroke="#C5DFD5" stroke-width="2"/>
+<g fill="#216E73"><circle cx="40" cy="140" r="6"/><circle cx="40" cy="250" r="6"/><circle cx="40" cy="352" r="6"/></g>
+<rect x="62" y="107" width="330" height="82" rx="17" fill="url(#card)"/>
+<text x="80" y="130" fill="#41837B" font-size="11">14:00</text><text x="80" y="153" fill="#264D47" font-size="17" font-weight="600">在书店，慢慢聊一会儿</text><text x="80" y="175" fill="#75877F" font-size="11">留一点时间，也留一点空白。</text>
+<text x="64" y="211" fill="#74877F" font-size="11">步行 · 约 5 分钟</text>
+<rect x="62" y="225" width="330" height="67" rx="17" fill="#F8F2ED"/>
+<text x="80" y="249" fill="#A58365" font-size="11">15:30</text><text x="80" y="274" fill="#614B3D" font-size="17" font-weight="600">一起做一件小东西</text>
+<text x="64" y="315" fill="#74877F" font-size="11">把换场的时间，也提前留好。</text>
+<rect x="62" y="329" width="330" height="62" rx="17" fill="#F5ECF1"/>
+<text x="80" y="351" fill="#A2718D" font-size="11">18:30</text><text x="80" y="376" fill="#78556A" font-size="17" font-weight="600">用一顿安静晚餐收尾</text>
+<text x="210" y="424" fill="#9CA6A1" font-size="10" text-anchor="middle">交互示意 · 非实时推荐</text>
+</g>
+</g>
+</svg>

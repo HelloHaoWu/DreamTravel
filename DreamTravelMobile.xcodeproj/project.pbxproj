@@ -1,0 +1,270 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		100000000000000000000001 /* DreamTravelMobileApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200000000000000000000001 /* DreamTravelMobileApp.swift */; };
+		100000000000000000000002 /* MobileStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200000000000000000000002 /* MobileStyle.swift */; };
+		100000000000000000000003 /* MobileItinerary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200000000000000000000003 /* MobileItinerary.swift */; };
+		100000000000000000000004 /* MobileMapLauncher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200000000000000000000004 /* MobileMapLauncher.swift */; };
+		100000000000000000000005 /* MobileRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200000000000000000000005 /* MobileRootView.swift */; };
+		100000000000000000000006 /* MobileHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200000000000000000000006 /* MobileHomeView.swift */; };
+		100000000000000000000007 /* MobileItineraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200000000000000000000007 /* MobileItineraryView.swift */; };
+		100000000000000000000008 /* MobilePlaceMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200000000000000000000008 /* MobilePlaceMapView.swift */; };
+		100000000000000000000009 /* MobilePlaceDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200000000000000000000009 /* MobilePlaceDetailView.swift */; };
+		10000000000000000000000A /* MobileStopPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20000000000000000000000C /* MobileStopPickerView.swift */; };
+		10000000000000000000000B /* AgentContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20000000000000000000000D /* AgentContracts.swift */; };
+		10000000000000000000000C /* MockTravelPlanning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20000000000000000000000E /* MockTravelPlanning.swift */; };
+		10000000000000000000000D /* TripVerifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20000000000000000000000F /* TripVerifier.swift */; };
+		10000000000000000000000E /* AgentRuntime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200000000000000000000010 /* AgentRuntime.swift */; };
+		10000000000000000000000F /* TripPlanningViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200000000000000000000011 /* TripPlanningViewModel.swift */; };
+		100000000000000000000010 /* DeepSeekConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200000000000000000000012 /* DeepSeekConnection.swift */; };
+		100000000000000000000011 /* ModelConnectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200000000000000000000013 /* ModelConnectionViewModel.swift */; };
+		100000000000000000000012 /* MobileSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200000000000000000000014 /* MobileSettingsView.swift */; };
+		100000000000000000000013 /* DeepSeekResponsesPlanningAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200000000000000000000015 /* DeepSeekResponsesPlanningAdapter.swift */; };
+		100000000000000000000014 /* TravelProviderConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200000000000000000000016 /* TravelProviderConfiguration.swift */; };
+		100000000000000000000018 /* TravelHTTPTransport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20000000000000000000001A /* TravelHTTPTransport.swift */; };
+		100000000000000000000019 /* TencentTravelAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20000000000000000000001B /* TencentTravelAPI.swift */; };
+		10000000000000000000001C /* DiscoveryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20000000000000000000001C /* DiscoveryService.swift */; };
+		10000000000000000000001D /* ReferenceLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20000000000000000000001D /* ReferenceLibrary.swift */; };
+		10000000000000000000001E /* MobileReferenceLibraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20000000000000000000001E /* MobileReferenceLibraryView.swift */; };
+		10000000000000000000001F /* PlaceResearchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20000000000000000000001F /* PlaceResearchService.swift */; };
+		100000000000000000000020 /* PlanThemeCatalog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200000000000000000000020 /* PlanThemeCatalog.swift */; };
+		100000000000000000000021 /* MobileThemeGalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200000000000000000000021 /* MobileThemeGalleryView.swift */; };
+		100000000000000000000022 /* PlaceReservation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200000000000000000000022 /* PlaceReservation.swift */; };
+		100000000000000000000023 /* MobileBookingWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 200000000000000000000023 /* MobileBookingWebView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		200000000000000000000001 /* DreamTravelMobileApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DreamTravelMobile/App/DreamTravelMobileApp.swift; sourceTree = SOURCE_ROOT; };
+		200000000000000000000002 /* MobileStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DreamTravelMobile/Style/MobileStyle.swift; sourceTree = SOURCE_ROOT; };
+		200000000000000000000003 /* MobileItinerary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DreamTravelMobile/Models/MobileItinerary.swift; sourceTree = SOURCE_ROOT; };
+		200000000000000000000004 /* MobileMapLauncher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DreamTravelMobile/Services/MobileMapLauncher.swift; sourceTree = SOURCE_ROOT; };
+		200000000000000000000005 /* MobileRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DreamTravelMobile/Views/MobileRootView.swift; sourceTree = SOURCE_ROOT; };
+		200000000000000000000006 /* MobileHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DreamTravelMobile/Views/MobileHomeView.swift; sourceTree = SOURCE_ROOT; };
+		200000000000000000000007 /* MobileItineraryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DreamTravelMobile/Views/MobileItineraryView.swift; sourceTree = SOURCE_ROOT; };
+		200000000000000000000008 /* MobilePlaceMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DreamTravelMobile/Views/MobilePlaceMapView.swift; sourceTree = SOURCE_ROOT; };
+		200000000000000000000009 /* MobilePlaceDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DreamTravelMobile/Views/MobilePlaceDetailView.swift; sourceTree = SOURCE_ROOT; };
+		20000000000000000000000A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = DreamTravelMobile/Resources/Info.plist; sourceTree = SOURCE_ROOT; };
+		20000000000000000000000B /* DreamTravelMobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DreamTravelMobile.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		20000000000000000000000C /* MobileStopPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DreamTravelMobile/Views/MobileStopPickerView.swift; sourceTree = SOURCE_ROOT; };
+		20000000000000000000000D /* AgentContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DreamTravelMobile/Agent/AgentContracts.swift; sourceTree = SOURCE_ROOT; };
+		20000000000000000000000E /* MockTravelPlanning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DreamTravelMobile/Agent/MockTravelPlanning.swift; sourceTree = SOURCE_ROOT; };
+		20000000000000000000000F /* TripVerifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DreamTravelMobile/Agent/TripVerifier.swift; sourceTree = SOURCE_ROOT; };
+		200000000000000000000010 /* AgentRuntime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DreamTravelMobile/Agent/AgentRuntime.swift; sourceTree = SOURCE_ROOT; };
+		200000000000000000000011 /* TripPlanningViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DreamTravelMobile/Features/Planning/TripPlanningViewModel.swift; sourceTree = SOURCE_ROOT; };
+		200000000000000000000012 /* DeepSeekConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DreamTravelMobile/Services/DeepSeekConnection.swift; sourceTree = SOURCE_ROOT; };
+		200000000000000000000013 /* ModelConnectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DreamTravelMobile/Features/Settings/ModelConnectionViewModel.swift; sourceTree = SOURCE_ROOT; };
+		200000000000000000000014 /* MobileSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DreamTravelMobile/Views/MobileSettingsView.swift; sourceTree = SOURCE_ROOT; };
+		200000000000000000000015 /* DeepSeekResponsesPlanningAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DreamTravelMobile/Services/DeepSeekResponsesPlanningAdapter.swift; sourceTree = SOURCE_ROOT; };
+		200000000000000000000016 /* TravelProviderConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DreamTravelMobile/Services/TravelProviderConfiguration.swift; sourceTree = SOURCE_ROOT; };
+		20000000000000000000001A /* TravelHTTPTransport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DreamTravelMobile/Services/TravelHTTPTransport.swift; sourceTree = SOURCE_ROOT; };
+		20000000000000000000001B /* TencentTravelAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DreamTravelMobile/Services/TencentTravelAPI.swift; sourceTree = SOURCE_ROOT; };
+		20000000000000000000001C /* DiscoveryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DreamTravelMobile/Services/DiscoveryService.swift; sourceTree = SOURCE_ROOT; };
+		20000000000000000000001D /* ReferenceLibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DreamTravelMobile/Services/ReferenceLibrary.swift; sourceTree = SOURCE_ROOT; };
+		20000000000000000000001E /* MobileReferenceLibraryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DreamTravelMobile/Views/MobileReferenceLibraryView.swift; sourceTree = SOURCE_ROOT; };
+		20000000000000000000001F /* PlaceResearchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DreamTravelMobile/Services/PlaceResearchService.swift; sourceTree = SOURCE_ROOT; };
+		200000000000000000000020 /* PlanThemeCatalog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DreamTravelMobile/Style/PlanThemeCatalog.swift; sourceTree = SOURCE_ROOT; };
+		200000000000000000000021 /* MobileThemeGalleryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DreamTravelMobile/Views/MobileThemeGalleryView.swift; sourceTree = SOURCE_ROOT; };
+		200000000000000000000022 /* PlaceReservation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DreamTravelMobile/Services/PlaceReservation.swift; sourceTree = SOURCE_ROOT; };
+		200000000000000000000023 /* MobileBookingWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DreamTravelMobile/Views/MobileBookingWebView.swift; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		300000000000000000000001 /* Frameworks */ = {isa = PBXFrameworksBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0; };
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		400000000000000000000001 = {
+			isa = PBXGroup;
+			children = (
+				400000000000000000000002 /* Sources */,
+				20000000000000000000000A /* Info.plist */,
+				400000000000000000000003 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		400000000000000000000002 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				200000000000000000000001 /* DreamTravelMobileApp.swift */,
+				200000000000000000000002 /* MobileStyle.swift */,
+				200000000000000000000003 /* MobileItinerary.swift */,
+				200000000000000000000004 /* MobileMapLauncher.swift */,
+				200000000000000000000005 /* MobileRootView.swift */,
+				200000000000000000000006 /* MobileHomeView.swift */,
+				200000000000000000000007 /* MobileItineraryView.swift */,
+				200000000000000000000008 /* MobilePlaceMapView.swift */,
+				200000000000000000000009 /* MobilePlaceDetailView.swift */,
+				20000000000000000000000C /* MobileStopPickerView.swift */,
+				20000000000000000000000D /* AgentContracts.swift */,
+				20000000000000000000000E /* MockTravelPlanning.swift */,
+				20000000000000000000000F /* TripVerifier.swift */,
+				200000000000000000000010 /* AgentRuntime.swift */,
+				200000000000000000000011 /* TripPlanningViewModel.swift */,
+				200000000000000000000012 /* DeepSeekConnection.swift */,
+				200000000000000000000013 /* ModelConnectionViewModel.swift */,
+				200000000000000000000014 /* MobileSettingsView.swift */,
+				200000000000000000000015 /* DeepSeekResponsesPlanningAdapter.swift */,
+				200000000000000000000016 /* TravelProviderConfiguration.swift */,
+				20000000000000000000001A /* TravelHTTPTransport.swift */,
+				20000000000000000000001B /* TencentTravelAPI.swift */,
+				200000000000000000000023 /* MobileBookingWebView.swift */,
+				200000000000000000000022 /* PlaceReservation.swift */,
+				200000000000000000000021 /* MobileThemeGalleryView.swift */,
+				200000000000000000000020 /* PlanThemeCatalog.swift */,
+				20000000000000000000001F /* PlaceResearchService.swift */,
+				20000000000000000000001E /* MobileReferenceLibraryView.swift */,
+				20000000000000000000001D /* ReferenceLibrary.swift */,
+				20000000000000000000001C /* DiscoveryService.swift */,
+			);
+			name = Sources;
+			sourceTree = "<group>";
+		};
+		400000000000000000000003 /* Products */ = {
+			isa = PBXGroup;
+			children = (20000000000000000000000B /* DreamTravelMobile.app */);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		500000000000000000000001 /* DreamTravelMobile */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 900000000000000000000002 /* Build configuration list for PBXNativeTarget */;
+			buildPhases = (
+				600000000000000000000001 /* Sources */,
+				300000000000000000000001 /* Frameworks */,
+				700000000000000000000001 /* Resources */,
+			);
+			buildRules = ();
+			dependencies = ();
+			name = DreamTravelMobile;
+			productName = DreamTravelMobile;
+			productReference = 20000000000000000000000B /* DreamTravelMobile.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		800000000000000000000001 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 2600;
+				LastUpgradeCheck = 2600;
+				TargetAttributes = { 500000000000000000000001 = { CreatedOnToolsVersion = 26.0; }; };
+			};
+			buildConfigurationList = 900000000000000000000001 /* Build configuration list for PBXProject */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = zh_CN;
+			hasScannedForEncodings = 0;
+			knownRegions = (en, Base, zh_CN);
+			mainGroup = 400000000000000000000001;
+			productRefGroup = 400000000000000000000003 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (500000000000000000000001 /* DreamTravelMobile */);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		700000000000000000000001 /* Resources */ = {isa = PBXResourcesBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0; };
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		600000000000000000000001 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				100000000000000000000001 /* DreamTravelMobileApp.swift in Sources */,
+				100000000000000000000002 /* MobileStyle.swift in Sources */,
+				100000000000000000000003 /* MobileItinerary.swift in Sources */,
+				100000000000000000000004 /* MobileMapLauncher.swift in Sources */,
+				100000000000000000000005 /* MobileRootView.swift in Sources */,
+				100000000000000000000006 /* MobileHomeView.swift in Sources */,
+				100000000000000000000007 /* MobileItineraryView.swift in Sources */,
+				100000000000000000000008 /* MobilePlaceMapView.swift in Sources */,
+				100000000000000000000009 /* MobilePlaceDetailView.swift in Sources */,
+				10000000000000000000000A /* MobileStopPickerView.swift in Sources */,
+				10000000000000000000000B /* AgentContracts.swift in Sources */,
+				10000000000000000000000C /* MockTravelPlanning.swift in Sources */,
+				10000000000000000000000D /* TripVerifier.swift in Sources */,
+				10000000000000000000000E /* AgentRuntime.swift in Sources */,
+				10000000000000000000000F /* TripPlanningViewModel.swift in Sources */,
+				100000000000000000000010 /* DeepSeekConnection.swift in Sources */,
+				100000000000000000000011 /* ModelConnectionViewModel.swift in Sources */,
+				100000000000000000000012 /* MobileSettingsView.swift in Sources */,
+				100000000000000000000013 /* DeepSeekResponsesPlanningAdapter.swift in Sources */,
+				100000000000000000000014 /* TravelProviderConfiguration.swift in Sources */,
+				100000000000000000000018 /* TravelHTTPTransport.swift in Sources */,
+				100000000000000000000019 /* TencentTravelAPI.swift in Sources */,
+				100000000000000000000023 /* MobileBookingWebView.swift in Sources */,
+				100000000000000000000022 /* PlaceReservation.swift in Sources */,
+				100000000000000000000021 /* MobileThemeGalleryView.swift in Sources */,
+				100000000000000000000020 /* PlanThemeCatalog.swift in Sources */,
+				10000000000000000000001F /* PlaceResearchService.swift in Sources */,
+				10000000000000000000001E /* MobileReferenceLibraryView.swift in Sources */,
+				10000000000000000000001D /* ReferenceLibrary.swift in Sources */,
+				10000000000000000000001C /* DiscoveryService.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		A00000000000000000000001 /* Debug */ = {isa = XCBuildConfiguration; buildSettings = { ALWAYS_SEARCH_USER_PATHS = NO; CLANG_ENABLE_MODULES = YES; DEBUG_INFORMATION_FORMAT = dwarf; ENABLE_TESTABILITY = YES; GCC_C_LANGUAGE_STANDARD = gnu17; GCC_OPTIMIZATION_LEVEL = 0; ONLY_ACTIVE_ARCH = YES; SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG; SWIFT_OPTIMIZATION_LEVEL = "-Onone"; }; name = Debug; };
+		A00000000000000000000002 /* Release */ = {isa = XCBuildConfiguration; buildSettings = { ALWAYS_SEARCH_USER_PATHS = NO; CLANG_ENABLE_MODULES = YES; DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym"; GCC_C_LANGUAGE_STANDARD = gnu17; SWIFT_COMPILATION_MODE = wholemodule; SWIFT_OPTIMIZATION_LEVEL = "-O"; }; name = Release; };
+		A00000000000000000000003 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = DreamTravelMobile/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 0.16.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dreamtravel.mobile;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		A00000000000000000000004 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = DreamTravelMobile/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 0.16.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dreamtravel.mobile;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		900000000000000000000001 /* Build configuration list for PBXProject */ = {isa = XCConfigurationList; buildConfigurations = (A00000000000000000000001 /* Debug */, A00000000000000000000002 /* Release */); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+		900000000000000000000002 /* Build configuration list for PBXNativeTarget */ = {isa = XCConfigurationList; buildConfigurations = (A00000000000000000000003 /* Debug */, A00000000000000000000004 /* Release */); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+/* End XCConfigurationList section */
+	};
+	rootObject = 800000000000000000000001 /* Project object */;
+}
