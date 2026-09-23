@@ -1,10 +1,14 @@
 <p align="center">
-  <img src="Documentation/Assets/hero.svg" width="100%" alt="DreamTravel — 把攻略的时间，留给见面。" />
+  <img src="Documentation/Assets/hero-en.svg" width="100%" alt="DreamTravel — Less planning. More time together." />
 </p>
 
 <p align="center">
-  <strong>一个轻量的 iPhone 约会与旅行规划助手。</strong><br />
-  告诉它在哪见面，把天气、地点和交通交给 Agent，留下一段完整、从容的相处时间。
+  <strong>A lightweight iPhone companion for thoughtful dates and city trips.</strong><br />
+  Tell it where you want to meet. Let the agent work through the weather, places, and routes, so you can focus on being together.
+</p>
+
+<p align="center">
+  <strong>English</strong> · <a href="README.zh-CN.md">简体中文</a>
 </p>
 
 <p align="center">
@@ -16,106 +20,108 @@
 </p>
 
 <p align="center">
-  <a href="#演示视频">演示视频</a> ·
-  <a href="#在-iphone-上使用">App 使用</a> ·
-  <a href="#体验设计">体验设计</a> ·
-  <a href="Documentation/Architecture.md">Agent 架构</a> ·
-  <a href="TravelProviderSetup.md">API 配置</a> ·
-  <a href="CONTRIBUTING.md">参与贡献</a>
+  <a href="#demo">Demo</a> ·
+  <a href="#using-the-iphone-app">Using the app</a> ·
+  <a href="#designed-to-feel-simple">Experience</a> ·
+  <a href="#how-the-agent-works">Agent architecture</a> ·
+  <a href="#2-connect-your-own-api-keys">API setup</a> ·
+  <a href="#whats-next">Contribute</a>
 </p>
 
 ---
 
-## 为相处留出余地
+## Make room for time together
 
-忙碌了一天，不想再做一晚上的攻略。DreamTravel 从「这周末，我们在哪见面」开始，结合天气、真实地点、交通与公开参考，整理几种不同的约会体验。
+After a long day, planning a date should not take another evening. DreamTravel starts with a simple question: “Where shall we meet this weekend?” It combines weather, real places, routes, and public references into a few distinct ways to spend time together.
 
-**DreamTravel 面向 iPhone，日常使用从打开 App 开始。** 当前为原生 iOS 开发预览版（v0.16.1），重点支持城市内半日约会，尚未提供 App Store、TestFlight 或公开安装包。Xcode 用于现阶段的开发调试；多日旅行、酒店库存和自动预订仍是后续方向。
+**DreamTravel is an iPhone app: everyday use starts by opening the app.** The current native iOS development preview (v0.16.1) focuses on half-day dates within a city. There is no public App Store release, TestFlight invitation, or installable download yet. Xcode is used for development and debugging; multi-day trips, hotel availability, and automated booking are future work.
 
-## 演示视频
+The current app interface and demo are in Chinese, and its data integrations focus on mainland China. This English README does not imply that the app has an English localization. Detailed supporting documents are currently in Chinese.
 
-[**▶ 观看 / 下载 Demo 1 · iPhone App 实际交互**](https://github.com/HelloHaoWu/DreamTravel/releases/download/demo-1/DreamTravel-Demo1.mp4)
+## Demo
 
-约 **11 分 23 秒**，无音轨。保留本次录制的真实等待过程；想先看行程、备选与主题切换，可以跳到 **08:00 左右**。这是一段模拟器录制，不代表真机性能或每次生成耗时。
+[**▶ Watch / download Demo 1 · iPhone app walkthrough**](https://github.com/HelloHaoWu/DreamTravel/releases/download/demo-1/DreamTravel-Demo1.mp4)
 
-[视频发布页与说明 →](https://github.com/HelloHaoWu/DreamTravel/releases/tag/demo-1)
+Approximately **11 minutes 23 seconds**, with no audio. The recording preserves the actual generation wait in this run. Skip to **around 08:00** to see the itinerary, alternative choices, and theme switching. This is simulator footage, not a benchmark of device performance or typical generation time.
 
-## 体验设计
+[Video release page and notes →](https://github.com/HelloHaoWu/DreamTravel/releases/tag/demo-1)
 
-| 少一点操作 | 多一点准备 |
+## Designed to feel simple
+
+| Less to do | More prepared for you |
 | --- | --- |
-| **城市 + 一句话** | 首页保留必要条件，自由描述可选填 |
-| **三套不同的安排** | 每套独立候选池，安排 3～5 个体验节点 |
-| **每站轻松换一个** | 独立三选一窗口，候选及前后交通提前准备 |
-| **交通只显示一个推荐** | 有合适备选才出现小图标，切换不用等待生成 |
-| **计划有自己的气氛** | 12 套预设视觉，按标题与内容配色；动效可关闭 |
-| **看到的是完整行程** | 会合、交通、停留、留白与返程连成一条时间线 |
+| **A city and an optional sentence** | Only essential inputs on the home screen |
+| **Three distinct plans** | Separate candidate pools, with 3–5 stops per plan |
+| **An easy change at each stop** | A dedicated three-choice sheet, with candidates and connecting routes prepared in advance |
+| **One recommended way to get there** | A small switch control appears only when suitable alternatives exist; no regeneration wait |
+| **A mood for each plan** | 12 visual presets matched to the title and content, with optional animations |
+| **One continuous itinerary** | Meeting up, travel, visits, breaks, and the return journey share a timeline |
 
-**交通也应当轻量：** 步行少于 8 分钟，只提供步行；8～15 分钟可有其他备选；超过 15 分钟排除步行。地图未返回的时间不靠比例换算。切换后赶不上下一站，会明确提示。
+**Travel choices stay simple too:** under 8 minutes on foot, only walking is offered; from 8 to 15 minutes, other suitable options may appear; over 15 minutes, walking is excluded. Missing route times are not estimated by scaling another transport mode. If a change makes the next stop too tight, the app flags it.
 
-## 数据有出处，未知有边界
+## Sources where available, uncertainty where needed
 
-- **先看天气再规划**：腾讯提供目标日期的温度、湿度和天气，再交给模型组织体验。
-- **真实地点与路线**：地址、坐标、步行／骑行／驾车耗时来自腾讯位置服务。
-- **主动发现新玩法**：调用搜索能力整理公开参考，保存出处供查看和复用。
-- **怎么点、怎么玩**：从可读且匹配同一家店的资料中提取建议、人民币消费参考和预约信息；样本不足会说明。
-- **预约交给平台**：有有效链接时打开 App 内网页；只有平台入口时明确标识，不冒充商家预订页。
-- **自己的灵感库**：管理参考条目，支持编辑、停用、删除，以及关闭自动积累和生成时引用。
+- **Weather before planning:** Tencent supplies temperature, humidity, and weather for the target date before the model puts the experience together.
+- **Real places and routes:** addresses, coordinates, and walking, cycling, and driving times come from Tencent Location Service.
+- **Fresh ideas through search:** the agent gathers public references and keeps their sources for review and reuse.
+- **What to order and what to do:** readable sources matched to the same venue inform recommendations, spending estimates in RMB, and reservation details. Insufficient evidence is labeled.
+- **Booking through the provider:** a valid booking link opens in an in-app web view. A general platform entry point is labeled as such, rather than presented as a venue-specific booking page.
+- **A personal inspiration library:** edit, disable, or delete saved references, and turn off automatic collection or their use in future plans.
 
-小红书、抖音、大众点评等平台的完整内容覆盖**不作保证**。不能读取的帖子不算有效样本，历史记录也不等于当天营业或有预约名额。
+Full access to content on Xiaohongshu (RedNote), Douyin, Dianping, and similar platforms is **not guaranteed**. Unreadable posts do not count as valid evidence, and past visitor reports do not establish today's opening hours or reservation availability.
 
-## 在 iPhone 上使用
+## Using the iPhone app
 
-以下是 App 内的使用流程；当前可先通过上方视频预览，安装分发将在后续版本开放。开发者本地调试见下方 [开发与验证](#开发与验证)。
+This describes the in-app workflow. For now, preview it in the demo above; public installation and distribution are planned for a later release. Developers can use the [local development instructions](#development-and-validation) below.
 
-### 1. 打开 DreamTravel
+### 1. Open DreamTravel
 
-从 iPhone 主屏幕打开 App，进入「开始」页。没有 Key 也可以先进入明确标注的演示行程。
+Open the app from the iPhone home screen and go to **Start (开始)**. A clearly labeled demo itinerary is available without API keys.
 
-### 2. 配置自己的 API Key
+### 2. Connect your own API keys
 
-打开 App 的设置：
+Open the app's settings:
 
-| 服务 | 配置方式 | 用途 |
+| Service | Where to configure it | Purpose |
 | --- | --- | --- |
-| DeepSeek | 「模型连接」中输入并验证自己的 Key | 结构化规划、联网搜索与整理 |
-| 腾讯位置服务 | 「我的腾讯位置服务」中输入并验证自己的 WebService Key | 地点、路线与天气 |
+| DeepSeek | Enter and validate your key in **Model Connection (模型连接)** | Structured planning, web search, and synthesis |
+| Tencent Location Service | Enter and validate your WebService key in **My Tencent Location Service (我的腾讯位置服务)** | Places, routes, and weather |
 
-模型连接默认请求 `deepseek-v4-flash`，运行时以供应商实际返回、账号可用的模型为准。规划和研究分别使用 Responses 与 Anthropic 兼容接口；仅支持 Chat Completions 的服务不能直接替代全部能力。
+The default requested model is `deepseek-v4-flash`; the model actually available depends on the provider response and your account. Planning uses a Responses-compatible interface, while research uses an Anthropic-compatible interface. A service that only supports Chat Completions cannot directly replace all of these capabilities.
 
-设置内提供腾讯官方快速注册页入口。**本仓库没有预填 Key，也不附带 API 额度**；免费额度、接口权限和计费以自己的服务商账号为准。
+Settings includes a shortcut to Tencent's official quick registration page. **No prefilled keys or API credits are included in this repository.** Free quotas, endpoint permissions, and billing depend on your own provider account.
 
-凭据保存在设备 Keychain。详细步骤见 [API 配置](TravelProviderSetup.md)，数据去向见 [隐私说明](Documentation/Privacy.md)。
+Credentials are stored in the device Keychain. See [API setup](TravelProviderSetup.md) and [privacy and data flows](Documentation/Privacy.md) for details (currently in Chinese).
 
-### 3. 安排这次见面
+### 3. Plan your time together
 
-输入城市，按需补充「少走路」「想一起做点东西」等描述，点击 **替我安排**。生成中可取消；全部候选和合适交通准备完毕后，才一次性展示完整结果。
+Enter a city, optionally add something like “less walking” or “make something together,” and tap **Plan for me (替我安排)**. You can cancel during generation. The complete result appears only after all candidates and suitable connecting routes are ready.
 
-> 真实生成会使用外部 API，耗时与费用取决于候选数量、地点研究、搜索和重试。城市半日行程的三套方案合计 72～126 条连接，按短步行比例需要约 72～378 次路线查询；另有地点、天气与模型调用。
+> Real generation calls external APIs. Time and cost depend on candidate count, venue research, search, and retries. Across three half-day plans, the app prepares 72–126 connections, requiring roughly 72–378 route queries depending on how many short walks qualify for walking-only treatment. Place, weather, and model calls are additional.
 
-## Agent 如何工作
+## How the agent works
 
 ```mermaid
 flowchart LR
-    A[城市与本次想法] --> B[天气与公开参考]
-    B --> C[真实 POI 与独立规划]
-    C --> D[候选、交通与地点研究]
-    D --> E[确定性校验]
-    E --> F[完整行程一次展示]
-    F --> G[本地即时切换]
+    A[City and preferences] --> B[Weather and public references]
+    B --> C[Real places and distinct plans]
+    C --> D[Candidates, routes, and venue research]
+    D --> E[Deterministic validation]
+    E --> F[Publish the complete itinerary]
+    F --> G[Switch instantly on device]
 ```
 
-Swift `actor` 在手机端协调工具与远端模型，`AsyncStream` 向 SwiftUI 提供进度及完成事件。来源、日期、有效期、路线完整性和时间衔接由代码校验。失败或取消不会发布半份结果，也不会覆盖上一份完整行程。
+Swift `actor` types coordinate tools and remote models on the phone. `AsyncStream` delivers progress and completion events to SwiftUI. Code checks sources, dates, freshness, route completeness, and schedule consistency. A failed or canceled run does not publish a partial plan or overwrite the last complete itinerary.
 
-详见 [架构与证据边界](Documentation/Architecture.md)。
+See [architecture and evidence boundaries](Documentation/Architecture.md) for more detail (currently in Chinese).
 
-## 开发与验证
+## Development and validation
 
-应用没有第三方 Swift 包依赖，使用 SwiftUI、Foundation、MapKit、Security 和 SafariServices 等系统框架。
+The app has no third-party Swift package dependencies. It uses system frameworks including SwiftUI, Foundation, MapKit, Security, and SafariServices.
 
-### 本地开发调试
+### Local development
 
-准备一台 Mac、支持 Swift 6 的 Xcode 和 iPhone 模拟器。工程最低运行版本为 iOS 17；当前开发环境使用 Xcode 26.6。
+You need a Mac, Xcode with Swift 6 support, and an iPhone simulator. The minimum deployment target is iOS 17; the current development environment uses Xcode 26.6.
 
 ```bash
 git clone https://github.com/HelloHaoWu/DreamTravel.git
@@ -123,69 +129,69 @@ cd DreamTravel
 open DreamTravelMobile.xcodeproj
 ```
 
-选择 **DreamTravelMobile** Scheme 和 iPhone 模拟器，按 **⌘R** 调试。真机调试需在 **Signing & Capabilities** 中选择自己的开发团队和可用 Bundle ID。
+Select the **DreamTravelMobile** scheme and an iPhone simulator, then press **⌘R** to debug. For a physical device, choose your own development team and an available bundle identifier under **Signing & Capabilities**.
 
-### 构建与检查
+### Build and check
 
 ```bash
-# 离线 Fixture：不调用付费 API
+# Offline fixtures: no paid API calls
 zsh scripts/check-travel-pipeline.sh
 zsh scripts/check-plan-themes.sh
 zsh scripts/check-http-recovery.sh
 
-# iPhone 模拟器构建
+# Build for the iPhone simulator
 xcodebuild -project DreamTravelMobile.xcodeproj \
   -scheme DreamTravelMobile -sdk iphonesimulator \
   -destination 'generic/platform=iOS Simulator' \
   -derivedDataPath /tmp/DreamTravelDerivedData \
   CODE_SIGNING_ALLOWED=NO build
 
-# 暂存修改后，检查将进入公开仓库的内容
+# After staging changes, check what will enter the public repository
 zsh scripts/check-publication.sh
 ```
 
-回归覆盖 3／4／5 站的 351 种候选组合、交通边界、完整发布、取消、网络恢复、证据引用和资料库行为。Fixture 通过不代表某个外部接口当前可用；真实联调单独配置，参见 [配置文档](TravelProviderSetup.md)。
+Regression coverage includes 351 candidate combinations across 3-, 4-, and 5-stop plans, transport thresholds, complete-result publication, cancellation, network recovery, evidence references, and library behavior. Passing fixtures does not establish that an external endpoint is currently available. Live integration requires separate configuration; see [API setup](TravelProviderSetup.md).
 
 ```text
 .
-├── DreamTravelMobile/            # 当前 iPhone App
-│   ├── Agent/                    # 编排、协议、调度与校验
-│   ├── Features/                 # 规划和连接状态
-│   ├── Services/                 # 模型、地图、研究与参考库
-│   ├── Models/                   # 展示模型与选择记忆
-│   ├── Style/                    # 12 套视觉预设
-│   └── Views/                    # SwiftUI 界面
-├── DreamTravelMobile.xcodeproj/  # 原生 iOS 工程
-├── Tests/                        # 无真实凭据的回归测试
-├── Tools/                        # 本地开发与发布检查
-├── scripts/                      # 构建与验证入口
-├── Documentation/               # 架构、隐私及自制展示素材
-└── Sources/DreamTravelApp/       # 早期 macOS 交互原型
+├── DreamTravelMobile/            # Current iPhone app
+│   ├── Agent/                    # Orchestration, protocols, scheduling, validation
+│   ├── Features/                 # Planning and connection state
+│   ├── Services/                 # Models, maps, research, reference library
+│   ├── Models/                   # Presentation models and remembered selections
+│   ├── Style/                    # 12 visual presets
+│   └── Views/                    # SwiftUI views
+├── DreamTravelMobile.xcodeproj/  # Native iOS project
+├── Tests/                        # Regression tests without real credentials
+├── Tools/                        # Local development and publication checks
+├── scripts/                      # Build and validation entry points
+├── Documentation/               # Architecture, privacy, original visual assets
+└── Sources/DreamTravelApp/       # Early macOS interaction prototype
 ```
 
 <details>
-<summary>运行早期 macOS 原型</summary>
+<summary>Run the early macOS prototype</summary>
 
 ```bash
 swift run DreamTravelApp
-# 或打包本地 .app
+# Or package a local .app
 zsh scripts/build-app.sh
 ```
 
-这部分保留早期交互验证，功能与当前 iOS App 不对等；新功能以 iOS 工程为准。
+This preserves the early interaction prototype. It does not have feature parity with the current iOS app; new features target the iOS project.
 
 </details>
 
-## 接下来
+## What's next
 
-- [ ] 完善真机体验，准备 iPhone App 的测试分发与安装流程。
-- [ ] 提高公开参考的可读率、同店匹配和可追溯性。
-- [ ] 增加更多交通、雨天及弱网场景的真机验证。
-- [ ] 将用户主动反馈沉淀为可查看、可删除的经验。
-- [ ] 扩展多日旅行、持久化恢复与更完整的预约衔接。
+- [ ] Refine the experience on physical devices and prepare iPhone app test distribution and installation.
+- [ ] Improve public-source readability, venue matching, and traceability.
+- [ ] Validate more transport, rainy-day, and unreliable-network scenarios on real devices.
+- [ ] Turn explicit user feedback into experience records that users can inspect and delete.
+- [ ] Expand to multi-day trips, persistent recovery, and more complete booking handoffs.
 
-欢迎通过 Issue 讨论可复现的问题，通过 PR 改善交互和实现。提交前请阅读 [贡献指南](CONTRIBUTING.md) 和 [安全说明](SECURITY.md)。
+Issues with reproducible steps and pull requests improving the experience or implementation are welcome. Please read the [contribution guide](CONTRIBUTING.md) and [security policy](SECURITY.md) before submitting (currently in Chinese).
 
-## 许可证
+## License
 
-[MIT](LICENSE) · DreamTravel contributors。代码及自制文档素材开放使用；第三方平台内容与数据遵循其自身条款。
+[MIT](LICENSE) · DreamTravel contributors. The code and original documentation assets are open source; third-party content and data remain subject to their respective terms.
